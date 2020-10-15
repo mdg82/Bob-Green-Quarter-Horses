@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+  <head>
+    <meta charset="utf-8">
+    <title>Responsive Navigation Bar</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="page_wrapper">
+      <div class="nav_wrapper">
+    <nav>
+      <ul>
+<li class="logo">Bob Green Quarter Horses</li>
+<li class="items"><a href="#">Home</a></li>
+<li class="items"><a href="#">About</a></li>
+<li class="items"><a href="#">Blogs</a></li>
+<li class="items"><a href="#">Contact</a></li>
+<li class="items"><a href="#">Feedback</a></li>
+<li class="btn"><a href="#"><i class="fas fa-bars"></i></a></li>
+</ul>
+</nav>
+</div>
+<section class="headline">
+  <h1>Responsive Navigation</h1>
+  <p>Using CSS grid and flexbox to easily build navbars!</p>
+</section>
+</div>
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.btn').click(function(){
+          $('.items').toggleClass("show");
+          $('ul li').toggleClass("hide");
+        });
+      });
+    </script>
+  </body>
+</html>
