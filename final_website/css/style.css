@@ -94,12 +94,14 @@ header {
     letter-spacing: 2px;;
   }*/
 
-  .logo img {
+  #logo img {
   height: 175px;
   width: auto;
   justify-self: start;
   position: absolute;
   top: 0;
+  transition: 0.2s;
+  z-index: 999;
   }
 
   /*header.sticky .logo {
@@ -169,7 +171,7 @@ header {
 /* SECTIONS */
 
 section {
-  padding: 130px;
+  padding: 100px; /*previous padding was 130px*/
 }
 
 .headline {
@@ -207,6 +209,7 @@ img {
 .aboutBx {
   margin-bottom: 10px;
   padding-right: 20px;
+  line-height: 1.5;
 }
 
 .w50 {
@@ -489,14 +492,15 @@ img {
   }
 
   /* MOBILE NAVIGATION */
-
-  header, /*header.sticky*/ {
+  /*header.sticky*/
+  header {
       padding: 20px 50px;
       z-index: 1000;
     }
+
     .menu {
       position: fixed;
-      top: 100px;
+      top: 80px;
       left: -100%;
       display: block;
       padding: 100px 50px;
@@ -505,7 +509,7 @@ img {
       height: 100vh;
       background: #ae9673;
       transition: 0.5s ease-in-out;
-      z-index: 999;
+      /*z-index: 999;*/
       border-top: 1px solid rgba(0,0,0,0.2);
     }
     .menu.active {
@@ -597,9 +601,8 @@ img {
 }
 
 @media only screen and (max-width: 630px) {
-  .logo img {
-  height: 120px;
-  width: auto;
+  #logo img {
+  height: 16.62049861495845vh;
   justify-self: start;
   position: absolute;
   top: 0;
