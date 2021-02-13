@@ -201,6 +201,10 @@ section {
   color: #000;
 }
 
+.info {
+  line-height: 1.5;
+}
+
 img {
   max-width: 100%;
   border: 1px solid #000;
