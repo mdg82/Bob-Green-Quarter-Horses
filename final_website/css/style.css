@@ -3,11 +3,13 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Georgia', 'Arial', sans-serif;
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
 }
 
 html, body {
     height: 100%;
+    background-color: #ae9673;
+    color: #000;
 }
 
 /* HEADINGS */
@@ -27,42 +29,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ae9673;
 }
 
-/*.nav-wrapper {
-  width: 100%;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  z-index: 10;
-}
-
-.info-bar {
-  width: 100%;
-  height: 30px;
-  padding: 3px;
-}
-
-.info-bar ul {
-  display: flex;
-  list-style-type: none;
-  justify-content: flex-end;
-}
-
-.info-bar ul li {
-  padding-left: 30px;
-  margin-top: 5px;
-  color: #fff;
-  z-index: 9999;
-}
-
-.header_facebook {
-  margin-right: 50px;
-}
-
-.header_facebook a {
-  color: #fff;
-}*/
-
 /* NAVIGATION */
 
 header {
@@ -79,21 +45,6 @@ header {
     background-color: #000;
   }
 
-  /*header.sticky {
-    background-color: #51432f;
-    padding: 20px 100px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-  }*/
-
-  /*header .logo {
-    color: #fff;
-    font-size: 24px;
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    letter-spacing: 2px;;
-  }*/
-
   #logo img {
   height: 175px;
   width: auto;
@@ -103,10 +54,6 @@ header {
   transition: 0.2s;
   z-index: 999;
   }
-
-  /*header.sticky .logo {
-    color: #fff;
-  }*/
 
   header ul {
     position: relative;
@@ -126,88 +73,78 @@ header {
     text-decoration: none;
   }
 
-  /*header.sticky ul li a {
-    color: #fff;
-  }*/
-
-/*.navbar {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-  height: 85px;
-  overflow: hidden;
-  background-color: #000;
-  color: #fff;
-  z-index: 1000;
-}
-
-.navbar img {
-  height: 75px;
-  width: auto;
-  justify-self: start;
-  margin-left: 55px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(7,1fr);
-  justify-self: end;
-}
-
-.nav-item a {
-  padding-left: 15px;
-  color: #fff;
-  font-size: 1rem;
-  font-weight: 400;
-  text-decoration: none;
-  transition: color 0.3s ease-out;
-}
-
-.nav-item a:hover {
-  color: #ae9673;
-}*/
-
 /* SECTIONS */
-
-section {
-  padding: 100px; /*previous padding was 130px*/
-}
 
 .headline {
   width: 100%;
-  height: 100vh;
-  min-height: 350px;
+  height: 110vh;
+  min-height: 500px;
 }
 
-.heading {
-  width: 100%;
-  text-align: center;
+.about,
+.contact {
+  padding: 100px;
 }
 
-.heading h2 {
-  font-weight: 600;
-  font-size: 30px;
+.studs,
+.mares,
+.sale,
+.broodMare,
+.gallery {
+  padding: 160px;
 }
 
 .content {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 20px;
-}
-
-.about {
-  background-color: #ae9673;
-  color: #000;
-}
-
-.info {
-  line-height: 1.5;
 }
 
 img {
   max-width: 100%;
   border: 1px solid #000;
+}
+
+.heading {
+  width: 100%;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+.heading h2, 
+.stud-heading h2,
+.mare-heading h2 {
+  font-weight: 600;
+  font-size: 2.5em;
+}
+
+.stud-heading {
+  background-image: url('../images/stud2.jpg');
+  background-size: cover;
+}
+
+.mare-heading {
+  background-image: url('../images/mares002.jpg');
+  background-size: cover;
+}
+
+.stud-heading,
+.mare-heading {
+  width: 100%;
+  height: 25vw;
+  position: relative;
+  top: 75px;
+  display: flex;
+}
+
+.stud-heading h2,
+.mare-heading h2 {
+  background-color: #000;
+  color: #fff;
+  margin: auto;
+  width: 35%;
+  text-align: center;
+  padding: 1%;
 }
 
 .aboutBx {
@@ -217,23 +154,40 @@ img {
 }
 
 .w50 {
-  min-width: 50%;
+  width: 100%;
 }
 
-.studs, .sale {
-  background-color: #927954;
+.firstFoal .content .foalBx {
+  max-width: 100%;
+  padding: 5px;
+}
+
+.firstFoal .content .foalBx p {
+  text-align: center;
+  font-size: 2em;
 }
 
 .studs .content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 2fr;
 }
 
-.studs .content .studBx {
+.broodMare .content {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  grid-gap: 20px;
+}
+
+.description .content {
+  display: flex;
+  justify-content: center;
+}
+
+.studs .content .studBx,
+.broodMare .content .broodMareBx {
   max-width: 100%;
-  margin: 0 auto;
-  background-color: #c7b79e;
-  padding-bottom: 10px;
+  /*margin: 0 auto;*/
+  padding-bottom: 50px;
 }
 
 .mares {
@@ -253,22 +207,114 @@ img {
   padding-bottom: 10px;
 }
 
-.mares .content .maresBx img {
+.gallery .content {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+.gallery .content .galleryBx {
   max-width: 100%;
+  margin: 0 auto;
 }
 
 .sale {
   height: 40vh;
 }
 
-.info h1, .info p {
-  text-align: center;
-  padding: 3px;
+.studInfo,
+.mareInfo,
+.broodMareInfo {
+  line-height: 1.5;
+  width: 100%;
 }
 
-.info p {
-  font-style: italic;
+.studInfo h1, .studInfo p {
+  text-align: left;
 }
+
+.mareInfo h1, 
+.mareInfo h2, 
+.mareInfo p,
+.broodMareInfo p {
+  text-align: center;
+}
+
+.studInfo p,
+.mareInfo p,
+.broodMareInfo p {
+  font-style: italic;
+  font-size: 1.25em;
+  padding: 2px;
+}
+
+td {
+  padding: 8px;
+  font-size: 0.85em;
+  font-weight: bold;
+  border-bottom: 1px solid #000;
+}
+
+.right {
+  text-align: right;
+}
+
+.pagination {
+  display: inline-block;
+}
+
+.pagination a {
+  background-color: #fff;
+  color: #000;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  font-size: 1em;
+}
+
+.pagination a.active {
+  background-color: #604020;
+  color: white;
+  border: 1px solid #604020;
+}
+
+/*.pagination a:hover:not(.active) {background-color: #ddd;}*/
+
+.pagination a:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.pagination a:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+/*.male {
+		background-color: #FFFFFF;
+		color: #000000;
+		font-family: Tahoma;
+		font-size: 8pt;
+		text-align: center;
+		vertical-align: middle;
+		border-collapse: collapse; 
+		border: 0px solid #000000;
+	}
+
+	.female {
+		background-color: #FFFFFF;
+		color: #000000;
+		font-family: Tahoma;
+		font-size: 8pt;
+		text-align: center;
+		vertical-align: middle;
+		border-collapse: collapse; 
+		border: 0px solid #000000;
+	}
+}*/
 
 .contact {
     background: #111;
@@ -379,52 +425,36 @@ img {
     align-items: center;
   }
 
-/* SEARCH FUNCTION */
-
-/*.no-search {
-  transform: translate(0);
-  transition: transform 0.7s ease-in-out;
-}*/
-
-/* MOBILE MENU & ANIMATION */
-
-/*.menu-toggle .bar{
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-toggle {
-  justify-self: end;
-  margin-right: 25px;
-  display: none;
-}
-
-.menu-toggle:hover{
-  cursor: pointer;
-}
-
-#mobile-menu.is-active .bar:nth-child(2){
-  opacity: 0;
-}
-
-#mobile-menu.is-active .bar:nth-child(1){
-  -webkit-transform: translateY(8px) rotate(45deg);
-  -ms-transform: translateY(8px) rotate(45deg);
-  -o-transform: translateY(8px) rotate(45deg);
-  transform: translateY(8px) rotate(45deg);
-}
-
-#mobile-menu.is-active .bar:nth-child(3){
-  -webkit-transform: translateY(-8px) rotate(-45deg);
-  -ms-transform: translateY(-8px) rotate(-45deg);
-  -o-transform: translateY(-8px) rotate(-45deg);
-  transform: translateY(-8px) rotate(-45deg);
-}*/
+  .slideanim {visibility:hidden;}
+  .slide {
+      animation-name: slide;
+      -webkit-animation-name: slide;
+      animation-duration: 1.5s;
+      -webkit-animation-duration: 1.5s;
+      visibility: visible;
+  }
+  @keyframes slide {
+    0% {
+      opacity: 0;
+      transform: translateY(40%);
+    } 
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+  @-webkit-keyframes slide {
+    0% {
+      opacity: 0;
+      -webkit-transform: translateY(40%);
+    } 
+    100% {
+      opacity: 1;
+      -webkit-transform: translateY(0%);
+    }
+  }
+  
+  
 
 /* Media Queries */
 
@@ -432,12 +462,17 @@ img {
 
   @media only screen and (max-width: 800px) {
 
-  section {
+  .about,
+  .contact {
       padding: 100px 50px;
   }
 
-  .info-bar {
-    display: none;
+  .studs,
+  .mares,
+  .sale,
+  .broodMare,
+  .gallery {
+    padding: 160px 50px;
   }
 
   .content {
@@ -467,7 +502,8 @@ img {
 }
 
 /* STUDS */
-.studs .content {
+.studs .content,
+.broodMare .content {
   grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
@@ -477,7 +513,8 @@ img {
   margin-top: 30px;
 }
 
-.mares .content {
+.mares .content,
+.gallery .content {
   grid-template-columns: 1fr 1fr;
 }
 
@@ -540,61 +577,6 @@ img {
       background-size: 25px;
       cursor: pointer;
     }
-    /*header.sticky .toggle {
-      filter: invert(1);
-    }*/
-    /*.menu-toggle .bar{
-  width: 25px;
-  height: 3px;
-  background-color: #fff;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-    .menu-toggle {
-  justify-self: end;
-  margin-right: 25px;
-}
-
-.menu-toggle:hover{
-  cursor: pointer;
-}
-
-.navbar ul {
-    display: flex;
-    flex-direction: column;
-    position: fixed;
-    justify-content: start;
-    top: 55px;
-    background-color: #000;
-    width: 100%;
-    height: calc(100vh - 55px);
-    transform: translate(-101%);
-    text-align: center;
-    overflow: hidden;
-  }
-
-  .navbar li {
-    padding: 15px;
-  }
-
-  .navbar li:first-child {
-    margin-top: 50px;
-  }
-
-  .navbar li a {
-    font-size: 1rem;
-  }
-
-  .menu-toggle, .bar {
-    display: block;
-    cursor: pointer;
-  }
-
-  .mobile-nav {
-  transform: translate(0%)!important;
-}*/
 
   /* SECTIONS */
 
@@ -605,6 +587,7 @@ img {
 }
 
 @media only screen and (max-width: 630px) {
+
   #logo img {
   height: 16.62049861495845vh;
   justify-self: start;
@@ -613,7 +596,22 @@ img {
   left: 0;
   }
 
-  .mares .content, .studs .content {
+  .stud-heading,
+  .mare-heading {
+    height: 100%;
+    top: 80px;
+  }
+
+  .stud-heading h2,
+  .mare-heading h2 {
+    font-size: 2em;
+  }
+
+
+  .mares .content, 
+  .studs .content,
+  .broodMare .content,
+  .gallery .content {
     grid-template-columns: 1fr;
   }
   .headline {

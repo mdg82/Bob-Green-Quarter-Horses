@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Welcome to Bob Green Quarter Horses</title>
+	<title>Home - Bob Green Quarter Horses</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/slideshow.css">
@@ -10,31 +10,17 @@
 </head>
 <body>
 	<div class="page-wrapper">
-		<!--<div class="nav-wrapper">-->
-			<!--<div class="info-bar">
-			<ul>
-				<li>
-					<i class='fas fa-phone' style='font-size:16px'> (816)465-0295</i>
-				</li>
-				<li>
-					<i class='far fa-envelope' style='font-size:16px'> bobgreen35@hotmail.com</i>
-				</li>
-				<li class="header_facebook">
-					<a href="https://www.w3schools.com/howto/howto_css_navbar_icon.asp"><i class='fab fa-facebook-f' style='font-size:16px'></i></a>
-					</li>
-			</ul>
-			</div>-->
 			<header>
 			<a href="#home" id="logo">
-				<img src="images/web_logo.jpg" alt="horse logo">
+				<img src="images/logo_CRX.jpg" alt="horse logo">
 			</a>
 			<div class="toggle" onclick="toggleMenu()"></div>
 			<ul class="menu">
 				<li><a href="#home" onclick="toggleMenu()">Home</a></li>
-				<li><a href="#about" onclick="toggleMenu()">About</a></li>
-				<li><a href="#studs" onclick="toggleMenu()">Studs</a></li>
-				<li><a href="#mares" onclick="toggleMenu()">Mares</a></li>
-				<li><a href="#sale" onclick="toggleMenu()">For Sale</a></li>
+				<li><a href="studs.html" onclick="toggleMenu()">Studs</a></li>
+				<li><a href="mares.html" onclick="toggleMenu()">Mares</a></li>
+				<li><a href="gallery.html" onclick="toggleMenu()">Gallery</a></li>
+				<li><a href="for_sale.html" onclick="toggleMenu()">For Sale</a></li>
 				<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
 			</ul>
 			</header>
@@ -61,9 +47,27 @@
   <div class="slideshow-image" style="background-image: url('images/slideshow_horse002.jpg')"></div>
   <div class="slideshow-image" style="background-image: url('images/slideshow_horse003.jpg')"></div>
   <div class="slideshow-image" style="background-image: url('images/slideshow_horse004.jpg')"></div>
-  <div class="slideshow-image" style="background-image: url('images/slideshow_horse005.jpg')"></div>
+  <!--<div class="slideshow-image" style="background-image: url('images/slideshow_horse005.jpg')"></div>-->
+  <div class="slideshow-image" style="background-image: url('images/gallery/running-horses.jpg')"></div>
 </div>
   </div>
+
+  <section class="firstFoal">
+	<div class="heading">
+		<h2>First foal of the season</h2>
+	</div>
+	<div class="content">
+		<div class="foalBx">
+			<img src="images/sugar_filly.jpg" alt="palomino filly">
+		</div>
+		<div class="foalBx">
+			<p>Palomino filly born March 28.</p>
+		</div>
+		<div class="foalBx">
+			<img src="images/sugar_filly2.jpg" alt="palomino filly">
+		</div>
+	</div>
+  </section>
 
   <section class="about" id="about">
 		<div class="heading">
@@ -85,180 +89,12 @@
 Dramatically engage seamlessly visualize quality intellectual capital without superior collaboration and idea-sharing.</p>
 		</div>
 		<div class="w50">
-			<img src="images/wildfire.jpg" alt="Horse named Wildfire">
+			<img class="slideanim" src="images/wildfire.jpg" alt="Horse named Wildfire">
 		</div>
 		</div>
 	</section>
 
-	<section class="studs" id="studs">
-      <div class="heading">
-        <h2>Our Studs</h2>
-      </div>
-      <div class="content">
-        <div class="studBx">
-          <img src="images/corona-1.jpg" alt="Stud Corona" />
-          <div class="info">
-            <h1>Corona</h1>
-            <p>March 25, 2016</p>
-            <p>Out of High Brow CD,<br>out of High Brow Cat,<br>and out of a Dual Pep daughter</p>
-            </div>
-        </div>
-        <div class="studBx">
-          <img src="images/stud_RJ.jpg" alt="Stud RJ" />
-          <div class="info">
-            <h1>R J</h1>
-            <p>May 5, 2013</p>
-			<p>Grandson of Big Red Solano on top,<br>
-				Great-grandson of Smart Little Lena on the bottom</p>
-            </div>
-        </div>
-      </div>
-    </section>
-
-	<section class="mares" id="mares">
-      <div class="heading">
-        <h2>Our Mares</h2>
-      </div>
-      <div class="content">
-        <!--<div class="maresBx">
-      			<img src="images/snow.jpg" alt="Snow" />
-			        <div class="info">
-			        <h1>Snow</h1>
-			        <p>Date of Birth</p>
-			        <p>Description</p>
-			        <p>Sire</p>
-			        <p>Dam</p>
-			 		</div>
-      		</div>-->
-        <div class="maresBx">
-      			<img src="images/honey.jpg" alt="Honey" />
-			        <div class="info">
-			        <h1>Honey</h1>
-			        <p>April 19, 2010</p>
-			        <p>Palomino</p>
-			        <p>Granddaughter of Count Quixotic</p>
-			 		</div>
-      		</div>
-        <div class="maresBx">
-      			<img src="images/debbie.jpg" alt="Debbie" />
-			        <div class="info">
-			        <h1>Debbie</h1>
-			        <p>April 27, 2013</p>
-			        <p>Bay</p>
-			 		</div>
-      		</div>
-      	<!--<div class="maresBx">
-      			<img src="images/jackie.jpg" alt="Mare" />
-			        <div class="info">
-			        <h1>Jackie</h1>
-			        <p>Date of Birth</p>
-			        <p>Description</p>
-			        <p>Sire</p>
-			        <p>Dam</p>
-			 		</div>
-			  </div>-->
-			  <div class="maresBx">
-				<img src="images/chic3.jpg" alt="Chic" />
-				  <div class="info">
-				  <h1>Chic</h1>
-				  <p>March 16, 2002</p>
-				  <p>Bay</p>
-				  <p>Granddaughter of Gallo Del Cielo on top,<br>and
-					Granddaughter of Doc O'Lena on the bottom</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/bailey.jpg" alt="Bailey" />
-				  <div class="info">
-				  <h1>Bailey</h1>
-				  <p>May 12, 1999</p>
-				  <p>Bay</p>
-				  <p>Granddaughter of Doc O'Lena on top,<br>
-				Great-granddaughter of King on the bottom</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/jesse.jpg" alt="Jesse" />
-				  <div class="info">
-				  <h1>Jesse</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Christy</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Dizzy</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Cheri</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div><div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Tassel</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Spitfire</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Duchess</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Dyna</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-			<div class="maresBx">
-				<img src="images/image-coming-soon.jpg" alt="Image coming soon" />
-				  <div class="info">
-				  <h1>Sugar Blossom</h1>
-				  <p>Birthdate</p>
-				  <p>Description</p>
-				   </div>
-			</div>
-      </div>
-    </section>
-
-    <section class="sale" id="sale">
-    	<div class="heading">
-    	<h2>For Sale</h2>
-    	<h4>Coming Soon!</h4>
-    	</div>
-    </section>
-
-    <section class="contact" id="contact">
+    <section class="contact" id="contact" name="contact">
 		<div class="heading white">
 			<h2>Contact Us</h2>
 		</div>
@@ -272,7 +108,7 @@ Dramatically engage seamlessly visualize quality intellectual capital without su
 						</div>
 						<div class="text">
 							<h3>Address</h3>
-							<p>37166 West Highway D<br>Polo, MO 64671</p>
+							<p>37166 Highway D<br>Polo, MO 64671</p>
 						</div>
 					</div>
 					<div class="box">
