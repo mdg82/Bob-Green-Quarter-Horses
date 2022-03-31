@@ -12,6 +12,10 @@ html, body {
     color: #000;
 }
 
+a {
+  text-decoration: none;
+}
+
 /* HEADINGS */
 
 h1, h2, h3, h4, h5, h6 {
@@ -36,7 +40,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 40px 100px;
+    padding: 30px 100px;
     z-index: 1000;
     display: flex;
     justify-content: space-between;
@@ -150,26 +154,23 @@ img {
 .aboutBx {
   margin-bottom: 10px;
   padding-right: 20px;
-  line-height: 1.5;
+  line-height: 1.75;
+  font-size: 1.25em;
 }
 
 .w50 {
   width: 100%;
 }
 
-.firstFoal .content .foalBx {
-  max-width: 100%;
-  padding: 5px;
-}
-
-.firstFoal .content .foalBx p {
-  text-align: center;
-  font-size: 2em;
+.horse_name {
+  font-weight: bold;
+  font-style: italic;
+  color: darkred;
 }
 
 .studs .content {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: 2fr 2fr;
 }
 
 .broodMare .content {
@@ -209,7 +210,7 @@ img {
 
 .gallery .content {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-gap: 20px;
   align-items: center;
   justify-items: center;
@@ -219,6 +220,94 @@ img {
   max-width: 100%;
   margin: 0 auto;
 }
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  margin: auto;
+  top: 5%;
+  padding: 0;
+  width: 90%;
+  max-width: 500px;
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  position: absolute;
+  top: 100px;
+  right: 25px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 
 .sale {
   height: 40vh;
@@ -292,29 +381,6 @@ td {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-
-/*.male {
-		background-color: #FFFFFF;
-		color: #000000;
-		font-family: Tahoma;
-		font-size: 8pt;
-		text-align: center;
-		vertical-align: middle;
-		border-collapse: collapse; 
-		border: 0px solid #000000;
-	}
-
-	.female {
-		background-color: #FFFFFF;
-		color: #000000;
-		font-family: Tahoma;
-		font-size: 8pt;
-		text-align: center;
-		vertical-align: middle;
-		border-collapse: collapse; 
-		border: 0px solid #000000;
-	}
-}*/
 
 .contact {
     background: #111;
@@ -509,7 +575,7 @@ td {
 }
 
 .studs .content .studBx {
-  width: 75%;
+  width: 100%;
   margin-top: 30px;
 }
 
@@ -614,6 +680,7 @@ td {
   .gallery .content {
     grid-template-columns: 1fr;
   }
+
   .headline {
     width: 100%;
     height: 50vh;
