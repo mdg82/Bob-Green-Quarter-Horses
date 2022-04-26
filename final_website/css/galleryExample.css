@@ -1,0 +1,87 @@
+/*body, html {
+  scroll-behavior: smooth;
+  font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+  background: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  padding: 30px 20px 10px 20px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 500;
+  color: white;
+}
+
+p {
+  text-align: center;
+  padding-bottom: 30px;
+  color: rgba(255, 255, 255, 0.5);
+}*/
+
+.photo-grid {
+  margin: 0 auto;
+  column-count: 4;
+  column-gap: 0;
+}
+@media all and (max-width: 800px) {
+  .photo-grid {
+    column-count: 2;
+  }
+}
+@media all and (max-width: 400px) {
+  .photo-grid {
+    column-count: 1;
+  }
+}
+.photo-grid a {
+  position: relative;
+  z-index: 0;
+  display: block;
+  max-height: 100vh;
+  overflow: hidden;
+}
+.photo-grid a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  opacity: 0.85;
+  filter: saturate(0.15);
+  transition: 0.25s ease-in-out;
+}
+.photo-grid a .image-description {
+  position: absolute;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  bottom: 0;
+  width: 100%;
+  transform: translateY(15px);
+  opacity: 0;
+  transition: 0.25s ease-in-out;
+  color: white;
+  font-size: 20px;
+}
+.photo-grid a:hover {
+  z-index: 99;
+}
+.photo-grid a:hover img {
+  opacity: 1;
+  filter: saturate(0.5);
+}
+.photo-grid a:focus {
+  z-index: 100;
+  outline: none;
+  box-shadow: 0 0 50px 20px rgba(0, 0, 0, 0.5);
+}
+.photo-grid a:focus img {
+  opacity: 1;
+  filter: saturate(1);
+  transform: scale(1.05);
+}
+.photo-grid a:focus .image-description {
+  transform: translateY(0);
+  opacity: 1;
+}
